@@ -1,0 +1,82 @@
+@import "../Base/Customize";
+@import "../Helper/Variable";
+@import "../Helper/Mixin";
+@import "../Component/Btn";
+@import "../Component/Background";
+
+.about {
+    background-color: #dcd1f0;
+    padding: $spacing-40 0;
+    position: relative;
+    width: 100%;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: $spacing-60;
+
+        .card {
+            border-radius: 15px;
+            border: none;
+            z-index: 3;
+            background-color: rgba(255, 255, 255, 1);
+            overflow: hidden;
+            transition: all 650ms ease-in-out;
+
+            &:hover {
+                box-shadow: 0px 7px 18px -4px rgba(0, 0, 0, 0.7);
+            }
+
+            .card-img {
+                transition: all 650ms ease-in-out;
+                overflow: hidden;
+
+                &:hover img {
+                    transform: scale(1.1);
+                    transition: all 650ms ease-in-out;
+                }
+
+                img {
+                    width: 100%;
+                    border-radius: 15px 15px 0 0;
+
+                }
+
+
+            }
+
+
+
+            .card-info {
+                margin: 30px 0;
+                padding: 0 25px;
+                text-align: center;
+
+                .title {
+                    color: $color-pink-purple;
+                    font-size: $font-size-small;
+                    font-weight: 900;
+                }
+
+                h3 {
+                    font-size: $font-size-medium;
+                    font-weight: 900;
+                }
+
+                p {
+                    font-size: $font-size-small;
+                    font-weight: 600;
+                }
+            }
+
+        }
+
+    }
+
+    .bg-img {
+        background-image: url(../../images/Wave_White_bottom_right_shape_01.png);
+        height: 380px;
+        position: absolute;
+        top: 53%;
+    }
+}

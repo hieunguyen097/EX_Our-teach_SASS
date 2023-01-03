@@ -1,0 +1,44 @@
+@import "../Base/Customize";
+@import "../Helper/Variable";
+@import "../Helper/Mixin";
+@import "../Component/Btn";
+@import "../Component/Background";
+
+.carousel {
+    background-image: url(../../images/yellow_top_wave_01.png);
+    width: 100%;
+    @extend .bg-img;
+    padding: 60px 0;
+    position: relative;
+
+    .container {
+        .row {
+            align-items: center;
+
+            .content-left {
+
+                p {
+                    color: $color-pink-purple;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+
+                h3 {
+                    font-size: $font-size-x-large;
+                    font-weight: 900;
+                }
+
+            }
+
+            .content-right {}
+        }
+
+    }
+    .bg-img{
+        background-image: url(../../images/Violet_top_left_wave.png);
+        @extend .bg-img;
+        height: 250px;
+        position: absolute;
+        top: 67%;
+    }
+}

@@ -1,0 +1,105 @@
+@import "../Base/Customize";
+@import "../Helper/Variable";
+@import "../Helper/Mixin";
+@import "../Component/Btn";
+
+* {
+    @extend .body;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    @media screen  and (max-width:1200px){
+        max-width: 100%;
+    }
+    .container {
+        @media screen  and (max-width:1200px){
+            max-width: 80%;
+        }
+
+        @media screen  and (max-width:1200px){
+            max-width: 80%;
+        }
+        
+        @media screen  and (max-width:1200px){
+            max-width: 80%;
+        }
+        .row {
+            align-items: center;
+
+            .logo {
+                padding: 0;
+
+                img {
+                    width: 80px;
+                }
+            }
+
+            .menu {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    li {
+                        padding: $spacing-40;
+                        position: relative;
+                        transition: all 0.3s;
+
+                        a {
+                            color: $color-black;
+                            font-size: $font-size-small;
+                            font-weight: 800;
+                            transition: all 0.3s;
+                           
+                        }
+                        &:hover{
+                            @include styleHoverNav($color-pink-purple);
+                            & a{
+                                color: $color-pink-purple;
+                            }
+                        }
+                        
+
+                        .active {
+                           @include styleHoverNav($color-pink-purple)
+                        }
+                    }
+
+                }
+            }
+
+            .contact {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .number-btn {
+
+                    @include btn($color-white, $color-pink-purple, $color-pink-purple, $color-white);
+
+                    i,
+                    span {
+                        position: relative;
+                        z-index: 2;
+                    }
+                }
+
+                .social {
+                    a {
+                        color: $color-black;
+                        margin: 0 5px;
+                        font-size: $font-size-normal;
+
+                        &:hover {
+                            color: $color-pink-purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

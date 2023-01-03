@@ -1,0 +1,109 @@
+@import "../Base/Customize";
+@import "../Helper/Variable";
+@import "../Helper/Mixin";
+@import "../Component/Btn";
+@import "../Component/Background";
+@import "../Component/Input";
+
+.find {
+    position: relative;
+    margin-top: $spacing-80;
+    .container {
+        width: 1000px;
+        position: relative;
+        z-index: 1;
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .content-left {
+                width: 60%;
+
+            }
+
+            .content-right {
+                
+                padding: 30px 0;
+                width: 40%;
+                box-shadow: 0px 7px 18px -4px rgba(0, 0, 0, 0.7);
+                background-color: $color-white;
+                border-radius: 10px;
+
+                h3 {
+                    font-size: $font-size-large;
+                    font-weight: 900;
+                }
+
+                .form {
+
+                    width: 80%;
+                    margin: 0 auto;
+
+                    .btContact {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .btLeft {
+                            margin-right: 20px;
+                            @extend .input;
+
+                            input {
+                                width: 100%
+                            }
+                        }
+
+                        .btRight {
+
+                            @extend .input;
+
+                            input {
+                                width: 100%;
+                            }
+
+                        }
+                    }
+
+                    .select {
+                        @extend .select;
+
+                        select {
+                            width: 100%
+                        }
+                    }
+
+                    .message {
+                        @extend .message;
+
+                        textarea {
+                            width: 100%
+                        }
+                    }
+
+                    button {
+                        @include btn($color-white, $color-pink-purple, $color-pink-purple, $color-white);
+
+                        span {
+                            z-index: 2;
+                            position: relative;
+                            margin: 0 $spacing-50;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bg-img {
+        background-image: url(../../images/accent_bottom_wave_01.png);
+        background-position: center;
+        background-size: cover;
+        height: 380px;
+        position: absolute;
+        top: 38%;
+        width: 100%;
+       
+    }
+}

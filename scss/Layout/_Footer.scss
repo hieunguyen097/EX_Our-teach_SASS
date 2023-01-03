@@ -1,0 +1,82 @@
+@import "../Base/Customize";
+@import "../Helper/Variable";
+@import "../Helper/Mixin";
+@import "../Component/Btn";
+@import "../Component/Background";
+@import "../Component/Input";
+@import "../Component/footer-item";
+
+.footer {
+    margin-top: 20px;
+    position: relative;
+
+    .container {
+        .row {
+            .contacts {
+                @extend .footer-item;
+                .social {
+                    a {
+                        color: $color-white;
+                        margin: 0 5px;
+                        font-size: $font-size-normal;
+
+                        &:hover {
+                            color: $color-black;
+                        }
+                    }
+                }
+            }
+
+            .link {
+                @extend .footer-item;
+            }
+
+            .abouts-footer {
+                @extend .footer-item;
+            }
+
+            .letter {
+                display: flex;
+                flex-direction: column;
+                width: 25%;
+                @extend .footer-item;
+
+                button {
+                    @include btn($color-black, $color-white, $color-white, $color-pink-purple);
+                    // width: 198px;
+                    border: 1px solid $color-white;
+                    padding: $spacing-30 0;
+                    margin-top: 30px;
+
+                    span {
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                }
+
+                input {
+                    
+                    border: none;
+                    padding: $spacing-30 0;
+                    text-align: center;
+                    border-radius: 30px;
+                    border: 1px solid;
+                    font-size: $font-size-normal;
+                    background-color: $color-pink-purple;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    .bg-img {
+        background-image: url(../../images/footer_background.jpg);
+        @extend .bg-img;
+        height: 475px;
+        position: absolute;
+        top: 0%;
+        z-index: -1;
+
+    }
+}
